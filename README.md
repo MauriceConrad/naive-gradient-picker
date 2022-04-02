@@ -17,8 +17,12 @@ $ npm install naive-gradient-picker
 **Script**
 
 ```javascript
+// Import component
 import NGradientPicker from 'naive-gradient-picker'
+// Import component's style
+import 'naive-gradient-picker/style.css'
 
+// Initialize a reactive gradient string 
 const gradient = ref(`linear-gradient(to right, blue, red, green)`);
 ```
 
@@ -36,7 +40,11 @@ Aside the `<n-gradient-picker>` component, you can also use the `<n-angle-thumb>
 **Script**
 
 ```javascript
+// Import component
 import { NAngleThumb } from 'naive-gradient-picker'
+// Import component's style
+import 'naive-gradient-picker/style.css'
 
+// Initialize a reactive angle 
 const angle = ref(90);
 ```
