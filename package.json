@@ -1,0 +1,59 @@
+{
+  "name": "naive-gradient-picker",
+  "version": "0.0.1",
+  "description": "Naive UI gradient picker",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "serve": "npm link && npm-watch build",
+    "build": "vite build -c vite.config.mjs",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MauriceConrad/naive-gradient-picker.git"
+  },
+  "keywords": [
+    "naive",
+    "ui",
+    "gradient",
+    "picker"
+  ],
+  "author": "Maurice Conrad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MauriceConrad/naive-gradient-picker/issues"
+  },
+  "homepage": "https://github.com/MauriceConrad/naive-gradient-picker#readme",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "npm-watch": "^0.11.0",
+    "sass": "^1.49.11",
+    "vite": "^2.9.1"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/naive-gradient-picker.es.js",
+      "require": "./dist/naive-gradient-picker.umd.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "dependencies": {
+    "@vicons/ionicons5": "^0.12.0",
+    "color-convert": "^2.0.1",
+    "gradient-parser": "^1.0.2",
+    "lodash": "^4.17.21",
+    "naive-ui": "^2.27.0",
+    "vue": "^3.2.31"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,mjs,cjs,vue,css",
+      "legacyWatch": true
+    }
+  }
+}
