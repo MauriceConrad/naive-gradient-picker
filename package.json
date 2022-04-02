@@ -1,6 +1,6 @@
 {
   "name": "naive-gradient-picker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Naive UI gradient picker",
   "main": "src/index.js",
   "type": "module",

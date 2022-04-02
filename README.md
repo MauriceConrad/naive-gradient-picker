@@ -8,11 +8,17 @@ $ npm install naive-gradient-picker
 
 ### Basic usage
 
+The `<n-gradient-picker>` component models any valid CSS gradient value (e.g. `linear-gradient(90deg, #fff, #00f 30%, #f00)`).
+
 **Template**
 
 ```html
-<n-gradient-picker v-model:value="gradient" />
+<n-gradient-picker v-model:value="gradient" size="medium" />
 ```
+
+#### Size
+
+The size can have the following values: `tiny`, `small`, `medium` or `large`.
 
 **Script**
 

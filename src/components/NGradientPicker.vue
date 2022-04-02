@@ -1,8 +1,8 @@
 <template>
   <div class="n-gradient-picker">
-    <n-popover placement="bottom" trigger="click" :show-arrow="false" class="n-gradient-picker__popover">
+    <n-popover placement="bottom" trigger="click" :show-arrow="false" class="n-gradient-picker__popover" :style="{ '--gradient-preview-size': gradientPreviewSize }">
       <template #trigger>
-        <div class="n-gradient-picker-preview" :style="{ 'border-color': theme.borderColor, 'border-radius': theme.borderRadius, '--gradient-preview-size': gradientPreviewSize }">
+        <div class="n-gradient-picker-preview" :style="{ 'border-color': theme.borderColor, 'border-radius': theme.borderRadius }">
           <div class="n-gradient-canvas" :style="{ 'background-image': value }">
             
           </div>
@@ -80,7 +80,7 @@
           margin: 15px 0 0;
         }
         .gradient-preview {
-          --gradient-preview-size: 400px;
+          
           width: var(--gradient-preview-size);
           height: var(--gradient-preview-size);
           border-radius: 3px;
@@ -164,9 +164,9 @@ const theme = useThemeVars();
 const gradientPreviewSize = computed(() => {
   const literalsSizes = {
     'tiny': '200px',
-    'small': '370px',
-    'medium': '350px',
-    'large': '40px'
+    'small': '250px',
+    'medium': '320px',
+    'large': '400px'
   }
   if (props.size in literalsSizes) {
     return literalsSizes[props.size];
