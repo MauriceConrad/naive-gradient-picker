@@ -1,5 +1,7 @@
 # Naive UI Gradient Picker
 
+![Preview](https://raw.githubusercontent.com/MauriceConrad/naive-gradient-picker/main/resources/screenshot_1.png)
+
 ```bash
 $ npm install naive-gradient-picker
 ```
