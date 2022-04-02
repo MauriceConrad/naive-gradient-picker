@@ -12,7 +12,7 @@
 <script setup>
 import { NConfigProvider, darkTheme, lightTheme, NButton, NSwitch } from 'naive-ui'
 import { ref } from 'vue'
-import NGradientPicker from '../../../src/components/NGradientPicker.vue'
+import { NGradientPicker } from 'naive-gradient-picker'
 
 
 const darkMode = ref(false);
