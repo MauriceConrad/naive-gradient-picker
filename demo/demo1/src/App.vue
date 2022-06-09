@@ -4,7 +4,7 @@
       <n-switch v-model:value="darkMode">Dark Mode</n-switch>
     </header>
     <main>
-      <n-gradient-picker v-model:value="gradient1" size="small" />
+      <n-gradient-picker v-model:value="gradient1" size="medium" />
     </main>
   </n-config-provider>
 </template>
@@ -12,8 +12,8 @@
 <script setup>
 import { NConfigProvider, darkTheme, lightTheme, NButton, NSwitch } from 'naive-ui'
 import { ref } from 'vue'
-import NGradientPicker from '../../../src/components/NGradientPicker.vue'
-//import 'naive-gradient-picker/style.css'
+import NGradientPicker from 'naive-gradient-picker'
+import 'naive-gradient-picker/style.css'
 
 
 const darkMode = ref(false);
