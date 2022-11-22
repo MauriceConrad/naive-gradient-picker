@@ -263,7 +263,6 @@ const updateColor = (i, newValue) => {
     ...gradient.value,
     colorStops: gradient.value.colorStops.map(({ type, value, length }, index) => {
       const color = ensureColor(index === i ? newValue : value, type);
-      console.log(index, color);
       return {
         type: 'rgba',
         value: ensureColor(index === i ? newValue : value, type).slice(5, -1).split(', ').map(Number),
