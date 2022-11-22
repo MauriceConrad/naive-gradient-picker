@@ -17,9 +17,19 @@ export function orientationToAngle({ type, value }) {
 
 export function ensureColor(value, type) {
   const str = value instanceof Array ? `rgba(${ [ ...value, 1 ].slice(0, 4).join(', ') })` : type === 'hex' ? `#${ value }` : value;
+  console.log('!', str, standarizeColor(str));
   try {
-    const [ , color ] = standarizeColor(str).match(/#(.*)/);
-    return `rgba(${ [ ...colorConvert.hex.rgb.raw(color), 1].join(', ') })`;
+    const standarizedColor = standarizeColor(str);
+    // if (standarizedColor.match(/rgba?\(.*\)/)) {
+    //   return standarizedColor;
+    // }
+    if (standarizedColor.match(/#(.*)/)) {
+      const [ , color ] = standarizedColor.match(/#(.*)/);
+      return `rgba(${ [ ...colorConvert.hex.rgb.raw(color), 1].join(', ') })`;
+    }
+    else {
+      return standarizedColor;
+    }
   }
   catch {
     return value;

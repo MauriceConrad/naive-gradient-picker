@@ -242,6 +242,7 @@ const stops = computed({
   },
   set(newStops) {
     newStops.sort((a, b) => a - b);
+    console.log(newStops);
     gradient.value = {
       ...gradient.value,
       colorStops: gradient.value.colorStops.map(({ type, value }, index) => {
@@ -261,6 +262,8 @@ const updateColor = (i, newValue) => {
   gradient.value = {
     ...gradient.value,
     colorStops: gradient.value.colorStops.map(({ type, value, length }, index) => {
+      const color = ensureColor(index === i ? newValue : value, type);
+      console.log(index, color);
       return {
         type: 'rgba',
         value: ensureColor(index === i ? newValue : value, type).slice(5, -1).split(', ').map(Number),
